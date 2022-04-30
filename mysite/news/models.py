@@ -1,4 +1,3 @@
-from turtle import title
 from django.db import models
 
 # Create your models here.
@@ -7,6 +6,9 @@ class News(models.Model):
     content = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    photo = ''
-    
-    
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d')
+    is_published = models.BooleanField(default=True)
+
+
+    def __str__(self) -> str:
+        return self.title
