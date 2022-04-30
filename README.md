@@ -1,0 +1,2 @@
+# Practice Django from [Proger coure](https://www.youtube.com/playlist?list=PLmC7X4gkQWCeyIdLxHZdts-3tkcrxP4-o).
+In this project i'll try to make Django project from [YouTube cource](https://www.youtube.com/playlist?list=PLmC7X4gkQWCeyIdLxHZdts-3tkcrxP4-o).
