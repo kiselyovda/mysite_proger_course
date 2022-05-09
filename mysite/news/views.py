@@ -4,7 +4,6 @@ from .models import News, Category
 from .forms import NewsForm
 
 
-# Create your views here.
 def index(request):
     context = {
         'news': News.objects.all(),
@@ -31,8 +30,8 @@ def add_news(request):
     if request.method == 'POST':
         form = NewsForm(request.POST)
         if form.is_valid():
-            news = News.objects.create(**form.cleaned_data)
-            return redirect(news)
+            # news = News.objects.create(**form.cleaned_data)
+            return redirect(form.save())
     else:
         form = NewsForm()
     return render(request, 'news/add_news.html', {'form': form})
