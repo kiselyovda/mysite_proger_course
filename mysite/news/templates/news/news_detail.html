@@ -12,7 +12,7 @@
     Категория: <a href="{{ news_item.category.get_absolute_url }}" style="text-decoration: none;"> {{ news_item.category }}</a>
   </div>
   <div class="card-body">
-      {% if item.photo %}
+      {% if news_item.photo %}
       <img src="{{ news_item.photo.url }}" alt="" width="200" class="float-left">
       {% else %}
       <img src="https://picsum.photos/200/200" alt="" class="float-left mr-3">
